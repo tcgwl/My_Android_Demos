@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.archer.demos">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:name=".MyApp"
         android:allowBackup="true"
@@ -20,6 +22,8 @@
         <activity android:name=".largeimage.LargeImageActivity">
         </activity>
         <activity android:name=".mvppractice.LoginActivity">
+        </activity>
+        <activity android:name=".greendao.GreenDaoDemoActivity">
         </activity>
     </application>
 
