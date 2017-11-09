@@ -4,16 +4,16 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import com.archer.demos.R;
 import com.archer.demos.mvppractice.bean.User;
 import com.archer.demos.mvppractice.presenter.UserLoginPresenter;
 import com.archer.demos.mvppractice.view.IUserLoginView;
+import com.archer.demos.utils.CustomToast;
+import com.archer.demos.utils.UIUtils;
 
 public class LoginActivity extends AppCompatActivity implements IUserLoginView {
 
@@ -85,24 +85,17 @@ public class LoginActivity extends AppCompatActivity implements IUserLoginView {
 
     @Override
     public void toMainActivity(User user) {
-        Toast.makeText(getApplicationContext(), "Go to MainActivity", Toast.LENGTH_SHORT).show();
+        CustomToast.showShort(UIUtils.getContext(), "Go to MainActivity");
     }
 
     @Override
     public void handleLoginFailed(String reason) {
         String msg = TextUtils.isEmpty(reason) ? "login failed" : reason;
-        Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+        CustomToast.showShort(UIUtils.getContext(), msg);
     }
 
-    /**
-     * 隐藏输入法键盘
-     */
     @Override
     public void hideInputMethodKeyBoard() {
-        final View v = getWindow().peekDecorView();
-        if (v != null && v.getWindowToken() != null) {
-            InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-            imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
-        }
+        UIUtils.hideInputMethodKeyBoard(LoginActivity.this);
     }
 }
