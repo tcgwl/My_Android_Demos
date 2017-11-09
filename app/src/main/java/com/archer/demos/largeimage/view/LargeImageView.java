@@ -28,7 +28,6 @@ public class LargeImageView extends AppCompatImageView {
     private BitmapRegionDecoder mBitmapRegionDecoder;
     private static final BitmapFactory.Options options = new BitmapFactory.Options();
 
-
     static {
         options.inPreferredConfig = Bitmap.Config.RGB_565;
     }
@@ -52,6 +51,7 @@ public class LargeImageView extends AppCompatImageView {
             public boolean onMove(MoveGestureDetector detector) {
                 int moveX = (int) detector.getMoveX();
                 int moveY = (int) detector.getMoveY();
+
                 if (mImageWidth > getWidth()) {
                     mRect.offset(-moveX, 0);
                     checkWidth();

@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">My_Android_Demos</string>
+    <string name="login_text">Login</string>
+    <string name="clear_text">Clear</string>
+    <string name="username_text">UserName:</string>
+    <string name="password_text">Password:</string>
+    <string name="username_hint_text">input username</string>
+    <string name="password_hint_text">input password</string>
 </resources>

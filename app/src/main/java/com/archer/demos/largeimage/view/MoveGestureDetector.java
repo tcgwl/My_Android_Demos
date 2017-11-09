@@ -48,7 +48,7 @@ public class MoveGestureDetector extends BaseGestureDetector {
         int actionCode = event.getAction() & MotionEvent.ACTION_MASK;
         switch (actionCode) {
             case MotionEvent.ACTION_DOWN:
-                resetState();
+                resetState();//防止没有接收到CANCEL/UP
                 mPreMotionEvent = MotionEvent.obtain(event);
                 updateStateByEvent(event);
                 break;
