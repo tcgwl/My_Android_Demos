@@ -15,6 +15,7 @@ import com.archer.demos.bean.ClassBean;
 import com.archer.demos.greendao.GreenDaoDemoActivity;
 import com.archer.demos.largeimage.LargeImageActivity;
 import com.archer.demos.mvppractice.LoginActivity;
+import com.archer.demos.mvpretrofitrxjava.ui.activity.MVPBookActivity;
 
 public class CategoryActivity extends AppCompatActivity {
     private ListView mListView;
@@ -22,6 +23,7 @@ public class CategoryActivity extends AppCompatActivity {
     private LayoutInflater mInflater;
 
     private ClassBean[] CLAZZES = new ClassBean[] {
+                    new ClassBean(MVPBookActivity.class, "搭建MVP+Retrofit+RxJava网络请求框架"),
                     new ClassBean(LoginActivity.class, "MVP简单练习"),
                     new ClassBean(GreenDaoDemoActivity.class, "GreenDao-购物车练习"),
                     new ClassBean(LargeImageActivity.class, "高清加载巨图方案，拒绝压缩图片")

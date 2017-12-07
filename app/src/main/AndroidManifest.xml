@@ -25,6 +25,8 @@
         </activity>
         <activity android:name=".greendao.GreenDaoDemoActivity">
         </activity>
+        <activity android:name=".mvpretrofitrxjava.ui.activity.MVPBookActivity">
+        </activity>
     </application>
 
 </manifest>
