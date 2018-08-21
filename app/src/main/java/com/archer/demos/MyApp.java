@@ -6,6 +6,10 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Handler;
 import android.os.Looper;
 
+import com.archer.demos.dagger.module.a02activity.global.AppComponent;
+import com.archer.demos.dagger.module.a02activity.global.AppModule;
+import com.archer.demos.dagger.module.a02activity.global.ComponentHolder;
+import com.archer.demos.dagger.module.a02activity.global.DaggerAppComponent;
 import com.archer.demos.greendao.bean.DaoMaster;
 import com.archer.demos.greendao.bean.DaoSession;
 
@@ -29,8 +33,15 @@ public class MyApp extends Application {
         mainThreadLooper = getMainLooper();
         handler = new Handler();
         super.onCreate();
-
+        inject();
         initGreenDao();
+    }
+
+    private void inject() {
+        AppComponent appComponent = DaggerAppComponent.builder()
+                .appModule(new AppModule(this))
+                .build();
+        ComponentHolder.setAppComponent(appComponent);
     }
 
     public static Context getContext() {

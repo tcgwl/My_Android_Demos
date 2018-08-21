@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ConfirmDialog"
+        android:textAllCaps="false"
+        android:onClick="showConfirmDialog"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EditDialog"
+        android:textAllCaps="false"
+        android:onClick="showEditDialog"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LoginDialog"
+        android:textAllCaps="false"
+        android:onClick="showLoginDialog"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DialogInDifferentScreen"
+        android:textAllCaps="false"
+        android:onClick="showDialogInDifferentScreen"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LoginDialogWithoutFragment"
+        android:textAllCaps="false"
+        android:onClick="showLoginDialogWithoutFragment"/>
+
+    <FrameLayout
+        android:id="@+id/id_ly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

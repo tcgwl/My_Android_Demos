@@ -6,4 +6,9 @@
     <string name="password_text">Password:</string>
     <string name="username_hint_text">input username</string>
     <string name="password_hint_text">input password</string>
+    <string name="msg_send_chat">发送聊天消息</string>
+    <string name="msg_send_subscribe">发送订阅消息</string>
+    <string name="string_permission_help_text">当前应用缺少必要的存储权限。\n\n请点击\"设置\"-\"权限\"-打开所需权限。\n\n最后点击两次后退按钮，即可返回。</string>
+    <string name="request_permission_denied_message">在设置-应用-APP-权限中开启\"%s\"权限，以正常使用APP功能。</string>
+    <string name="request_permission_rational_message">\"%s\"权限需要授权开启，否则将不能正常使用。</string>
 </resources>
